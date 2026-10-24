@@ -1,8 +1,17 @@
 [project]
-name = "a13"
+name = "SE A13"
 version = "0.1.0"
-requires-python = ">=3.14"
+requires-python = ">=3.11"
 dependencies = [
-    "torch>=2.14.1",
-    "torchvision>=0.29.1",
+    "matplotlib",
+    "numpy",
+    "torch",
+    "torchvision",
 ]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["linux-64", { platform = "osx-arm64", osx = "14.0" }, "win-64"]
+
+[tool.pixi.dependencies]
+python = ">=3.11,<3.15"
